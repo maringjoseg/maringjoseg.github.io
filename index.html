@@ -5,46 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Inteligencia Artificial</title>
     <style>
-        /* Estilos generales consistentes */
+        /* Estilos generales */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
             color: #333;
+            background-color: #f5f7fa;
         }
-
-                /* Contenedor principal */
+        
+        /* Contenedor principal */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
         
-
+        /* Cabecera */
         header {
+            text-align: center;
+            padding: 0.5rem 0;
             background-color: #2c3e50;
             color: white;
-            padding: 1rem;
-            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        .custom-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 30px; /* Ajusta según el tamaño deseado */
-            height: 30px;
-            cursor: pointer;
-            transition: transform 0.3s;
-            z-index: 100; /* Asegura que esté sobre otros elementos */
-        }
-
-        .custom-icon:hover {
-            transform: scale(1.1); /* Efecto de hover más suave */
-            opacity: 0.9; /* Ligera transparencia al pasar el mouse */
-        }
-
+        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
@@ -55,41 +43,23 @@
             font-weight: 300;
             margin: 0.5rem 0;
         }
-       
-        nav {
-            background-color: #34495e;
-            padding: 0.5rem;
-            text-align: center;
+
+        .custom-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px; /* Ajusta según el tamaño deseado */
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            z-index: 100; /* Asegura que esté sobre otros elementos */
         }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            padding: 0.5rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+
+        .custom-icon:hover {
+            transform: scale(1.1); /* Efecto de hover más suave */
+            opacity: 0.9; /* Ligera transparencia al pasar el mouse */
         }
-        
-        nav a:hover {
-            background-color: #2c3e50;
-        }
-        
-        .page {
-            display: none;
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        
-        .active {
-            display: block;
-        }
-        
+
         /* Sección de contenido */
         .contenido {
             background: white;
@@ -98,140 +68,273 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             margin-bottom: 2rem;
         }
-
+        
+        /* Pie de página */
         footer {
+            text-align: center;
+            padding: 1.5rem;
             background-color: #2c3e50;
             color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 1rem;
+            border-radius: 8px;
         }
-        
-        .back-button {
-            background-color: #3498db;
+
+        /* Estilo del botón */
+        .btn-abrir-modal {
+            padding: 10px 20px;
+            background-color: #2c3e50;
             color: white;
             border: none;
-            padding: 0.5rem 1rem;
             border-radius: 4px;
             cursor: pointer;
-            margin-top: 1rem;
+            font-size: 16px;
         }
         
-        .back-button:hover {
-            background-color: #2980b9;
+        /* Fondo oscuro del modal */
+        .modal-fondo {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Contenedor del modal */
+        .modal-contenido {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        /* Botón de cerrar */
+        .cerrar-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+        }
+        
+        .cerrar-modal:hover {
+            color: #333;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Icono agregado aquí -->
-        <img src="images/uba-logo-blanco-azul.png" alt="Icono" class="custom-icon">
-        <!-- <h1>REPÚBLICA BOLIVARIANA DE VENEZUELA</h1>
-        <h1>UNIVERSIDAD BICENTENARIA DE ARAGUA</h1>
-        <h1>VICERRECTORADO ACADÉMICO</h1>
-        <h1>DECANATO DE INVESTIGACIÓN, EXTENSIÓN Y POSTGRADO</h1>
-        <h1></h1>
-        <h1></h1>
-        <h1></h1>-->
-        <h1>Portafolio Digital para Inteligencia Artificial</h1>
+        <div class="container">
+            <img src="images/uba-logo-blanco-azul.png" alt="Icono" class="custom-icon">
+            <h1>Portafolio Digital para Inteligencia Artificial</h1>
+            <!-- Puedes añadir más secciones según necesites 
+            <h1>Portafolio Inteligencia Artificial</h1>
+            <h2>José G. Marín G.</h2>-->
+        </div>
     </header>
     
-    <nav>
-        <a href="#" onclick="showPage('home')">Presentación</a>
-        <a href="#" onclick="showPage('definiciones')">Definiciones básicas</a>
-        <a href="#" onclick="showPage('historia')">Historia</a>
-        <a href="#" onclick="showPage('filosofia')">Fundamentación filosófica</a>
-        <a href="#" onclick="showPage('reflexiones')">Reflexiones finales</a>
-    </nav>
-    
-    <!-- Página de Inicio -->
-    <div id="home" class="page active">
-        <main class="container">
-            <section class="contenido">
-                <h2>Bienvenido a nuestra página</h2>
-                <p>Esta es la página principal de nuestro sitio web. Desde aquí puedes navegar a otras secciones.</p>
-                <a href="./assets/presentacion.pdf" target="_blank">Presentación del portafolio digital</a>            
-                <!-- <img src="https://via.placeholder.com/400x200?text=Página+Principal" alt="Imagen principal">-->
-            </section>
-        </main>
-    </div>
-    
-    <!-- Página Acerca de -->
-    <div id="definiciones" class="page">
-        <main class="container">
-            <section class="contenido">
-                <h2>Definiciones</h2>
-                <p style="text-align: justify;">Desde que Open AI lanzó ChatGPT como una versión gratuita </p>
-                <!--<img src="https://via.placeholder.com/400x200?text=Acerca+de" alt="Acerca de nosotros">-->
-                <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
-            </section>
-        </main>
-    </div>
-    
-    <!-- Página de Contacto -->
-    <div id="historia" class="page">
-        <h2>Contacto</h2>
-        <p>Puedes contactarnos a través de los siguientes medios:</p>
-        <ul>
-            <li>Email: contacto@empresa.com</li>
-            <li>Teléfono: +123456789</li>
-            <li>Dirección: Calle Principal 123, Ciudad</li>
-        </ul>
-        <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
-    </div>
-    
-    <!-- Página de Filosofia -->
-    <div id="filosofia" class="page">
-        <h2>Contacto</h2>
-        <p>Puedes contactarnos a través de los siguientes medios:</p>
-        <ul>
-            <li>Email: contacto@empresa.com</li>
-            <li>Teléfono: +123456789</li>
-            <li>Dirección: Calle Principal 123, Ciudad</li>
-        </ul>
-        <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
-    </div>
+    <main class="container">
+        <section class="contenido">
+            <h2>Presentación</h2>
+            <p>El presente portafolio contiene información resumida para consultas rápidas sobre la Inteligencia Artificial (IA).</p>  
+            <p>Aquí pueden leer algunas definiciones, una breve reseña de la historia, así como una introducción a ciertos fundamentos filosóficos.</p>
+            <p>También contiene las referencias de las fuentes consultadas y el contenido de alguna de esas fuentes.</p>
+            <p>Para consultar el portafolio puedes ir al siguiente URL:</p>
+            <p><a href="https://maringjoseg.github.io/" target="_blank">https://maringjoseg.github.io/</a></p>
+            
+            <h3>Definición de IA</h3>
+            <p>Un breve resumen de lo que es la inteligencia artificial...</p>
 
-    <!-- Página de reflexiones -->
-    <div id="reflexiones" class="page">
-        <h2>Contacto</h2>
-        <p>Puedes contactarnos a través de los siguientes medios:</p>
-        <ul>
-            <li>Email: contacto@empresa.com</li>
-            <li>Teléfono: +123456789</li>
-            <li>Dirección: Calle Principal 123, Ciudad</li>
-        </ul>
-        <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
-    </div>
+            <button class="btn-abrir-modal" id="btnModal1">Ir...</button>
+    
 
+
+
+
+            <h3>Historia de la IA</h3>
+            <p>Un breve paseo por los hitos más importantes...</p>
+            <button class="btn-abrir-modal" id="btnModal2">Ir...</button>
+            
+            <h3>IA Débil vs IA Fuerte</h3>
+            <p>Descripción de ambas filosofías...</p>
+            <button class="btn-abrir-modal" id="btnModal4">Ir...</button>
+
+            <!-- Modal 1 -->
+            <div class="modal-fondo" id="modal1">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <h2>Definición</h2>
+                    <p style="text-align: left;">Desde que Open AI lanzó ChatGPT como una versión gratuita al público, a finales del año 2022, el uso del término Inteligencia Artificial se ha incrementa de manera importante y ha pasado a formar parte de la vida cotidiana.  El término se ha venido usando desde antes por el público en general, en menor grado, específicamente por algunos usuarios de las redes sociales para referirse alternativamente a los denominados “filtros” que cambian la apariencia de la persona o agregan efectos que parecen reales, por mencionar algunos.</p>
+                    <p style="text-align: left;">Apartando lo asombroso de los filtros y la posibilidad de contar con “alguien” a quién preguntarle o hablar sobre cualquier tema y que siempre está disponible ¿Qué es la Inteligencia Artificial?  ¿Qué no es la Inteligencia Artificial?</p>
+                    <p style="text-align: left;">“Un problema fundamental en inteligencia artificial es que nadie conoce realmente lo que es la inteligencia” (Legg & Hutter, 2007,  como se citó en David, 2024).</p>
+                    <p style="text-align: left;">“El estudio y desarrollo de sistemas computacionales capaces de ejecutar tareas que normalmente requieren de inteligencia humana, tales como percepción visual, reconocimiento de voz, toma decisiones y traducciones entre idiomas” (Oxford languages, 2020, como se citó en Toosi, Bottino, Saboury, Siegel & Rahmim, 2021)</p>
+                    <p style="text-align: left;">“La ciencia de hacer que las máquinas hagan cosas que requerirían inteligencia si fueran hechas por los hombres” (Minsky, 2021) </p>
+                    <p style="text-align: left;">Son algunas definiciones de valor para entender la Inteligencia Artificial. </p>
+                </div>
+            </div>
+            
+            <!-- Modal 2 -->
+            <div class="modal-fondo" id="modal2">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <h2>Historia</h2>
+                    <p>Se puede establecer como el inicio formal de la historia de la Inteligencia Artificial (IA) el año 1950 cuando Allan Turing se preguntó “¿Pueden las maquinas pensar?”</p>
+                    <p>La obra Yo, Robot, de Isaac Asimov, escrita en 1942, puede considerarse una obra de relevancia en el estudio de la ética moderna de la IA (Toosi, Bottino, Saboury, Siegel & Rahmim, 2021).  </p>
+                    <p>Se distinguen tres etapas importantes en la historia de la IA: la de los algoritmos de búsqueda desde el año 1956 al 1982, la de los sistemas expertos desde 1982 al 1997 y la actual etapa de desarrollo desde 1997 en la que ha surgido Machine Learning (aprendizaje de máquina o automático), Deep Learning (aprendizaje profundo).</p>
+                    <p>En 1966, Joseph Weizenbaum en el MIT desarrolló el primer chatbot en la historia de la IA, ELIZA, como un terapista virtual de apoyo a los pacientes.</p>
+                    <p>Los sistemas expertos se originaron en Carnegie Mellon University, basados en IA débil, para brindar soluciones generales con algoritmos de búsqueda sobre todos los estados posibles construidos con una serie de pasos básicos de razonamiento. Sobre este nuevo esquema, Ed Feigenbaum, Bruce Buchanan y Joshua Lederberg crearon DENDRAL en Stanford a finales de la década de 1960 y principios de 1970.</p>
+                    <p>En la década de 1990 los investigadores de IA empezaron a adoptar las teorías de decisión y el razonamiento probabilístico en sus investigaciones. La gran cantidad de data en distintas áreas y la influencia de métodos estadísticos como el aprendizaje de máquina y la optimización en los métodos de investigación de IA permitieron un impulso en los campos de modelosmultiagentes, procesamiento de lenguaje natural, robótica y visión computarizada.</p>
+                    <p>Tras cada una de las dos primeras etapas previamente mencionadas ocurrió una especie de enfriamiento o invierno en el mundo de la IA. Toosi, Bottino, Saboury, Siegel & Rahmim, (2021) creen que la tercera etapa de la IA sigue en crecimiento e identifican aspectos importantes para evitar que llegue otro invierno en el mundo de la IA.</p>
+                </div>
+            </div>
+
+            <!-- Modal 4 -->
+            <div class="modal-fondo" id="modal4">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <h2>IA Débil / IA Fuerte</h2>
+                    <p style="text-align: left;">Actualizando... </p>
+                </div>
+            </div>
+
+
+        </section>
+        
+        <!-- Puedes añadir más secciones según necesites -->
+        <section class="contenido">
+            <h3>Referencias</h3>
+            <button class="btn-abrir-modal" id="btnModal3">Ir...</button>
+
+            <!-- Modal 3 Referencias -->
+            <div class="modal-fondo" id="modal3">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <h2>Referencias</h2>
+                    <p>David, C (2024): What is AI, what is it not, how we use it in physics and how it impacts... you.</p>
+                    <p>Legg, S., Hutter, M. Universal Intelligence: A Definition of Machine Intelligence. Minds & Machines 17, 391–444 (2007). 
+                        <a href="https://doi.org/10.1007/s11023-007-9079-x" target="_blank">https://doi.org/10.1007/s11023-007-9079-x</a></p>
+                    <p>Toosi, A., Bottino, A., Saboury, B., Siegel, E., & Rahmim, A. (2021). A brief history of AI: How to prevent another winter (A critical review). 
+                        <a href="https://doi.org/10.1016/j.cpet.2021.07.001" target="_blank">https://doi.org/10.1016/j.cpet.2021.07.001</a></p>
+                    <p>Michael Aaron Dennis. Marvin Minsky, american scientist: Encyclopedia britannica. 
+                        <a href="https://www.britannica.com/biography/Marvin-Lee-Minsky" target="_blank">https://www.britannica.com/biography/Marvin-Lee-Minsky</a>,  enero 2021. Consultado 2025, mayo 29.</p>
+                    <p>Turing, A. M. (1950). Computing Machinery and Intelligence. Mind, 59(236), 433–460. 
+                        <a href="http://www.jstor.org/stable/2251299" target="_blank">http://www.jstor.org/stable/2251299</a>. Consultado 2025, mayo 29</p>
+                </div>
+            </div>
+            
+            <!-- 
+            <h3>Proyectos destacados</h3>
+            <p>Descripción de tus trabajos en IA...</p>
+            -->
+        </section>
+        <section class="contenido">
+            <h3>Contenido completo del portafolio</h3>
+            <a href="./portafoliojmarin.pdf" target="_blank">Descargar...</a>
+        </section>
+    </main>
+    
     <footer>
         <div class="container">
             <p style="text-align: right;">Autor: José G. Marín G</p>
             <p style="text-align: center;">San Joaquín de Turmero, mayo, 2025</p>
         </div>
     </footer>
-    
+
     <script>
-        // Función para mostrar una página específica y ocultar las demás
-        function showPage(pageId) {
-            // Ocultar todas las páginas
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('active');
+        // Funcionalidad para ambos modales
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos del DOM
+            const modales = {
+                modal1: document.getElementById('modal1'),
+                modal2: document.getElementById('modal2'),
+                modal3: document.getElementById('modal3'),
+                modal4: document.getElementById('modal4')
+            };
+            
+            const botones = {
+                btnModal1: document.getElementById('btnModal1'),
+                btnModal2: document.getElementById('btnModal2'),
+                btnModal3: document.getElementById('btnModal3'),
+                btnModal4: document.getElementById('btnModal4')
+            };
+            
+            // Todos los botones de cerrar
+            const cerrarBotones = document.querySelectorAll('.cerrar-modal');
+            
+            // Abrir modales
+            botones.btnModal1.addEventListener('click', () => abrirModal('modal1'));
+            botones.btnModal2.addEventListener('click', () => abrirModal('modal2'));
+            botones.btnModal3.addEventListener('click', () => abrirModal('modal3'));
+            botones.btnModal4.addEventListener('click', () => abrirModal('modal4'));
+            
+            // Cerrar modales
+            cerrarBotones.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const modal = this.closest('.modal-fondo');
+                    cerrarModal(modal);
+                });
             });
             
-            // Mostrar la página solicitada
-            document.getElementById(pageId).classList.add('active');
+            // Cerrar al hacer clic fuera del contenido
+            Object.values(modales).forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        cerrarModal(this);
+                    }
+                });
+            });
             
-            // Desplazarse al principio de la página
-            window.scrollTo(0, 0);
-        }
-        
-        // Opcional: Manejar el botón "Atrás" del navegador
-        window.addEventListener('popstate', function(event) {
-            const pageId = event.state ? event.state.pageId : 'home';
-            showPage(pageId);
+            // Cerrar con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    Object.values(modales).forEach(modal => {
+                        if (modal.style.display === 'flex') {
+                            cerrarModal(modal);
+                        }
+                    });
+                }
+            });
+            
+            // Funciones reutilizables
+            function abrirModal(modalId) {
+                // Cerrar cualquier modal abierto primero
+                Object.values(modales).forEach(modal => {
+                    if (modal.style.display === 'flex') {
+                        cerrarModal(modal);
+                    }
+                });
+                
+                // Abrir el modal solicitado
+                modales[modalId].style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Evitar scroll
+            }
+            
+            function cerrarModal(modalElement) {
+                modalElement.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restaurar scroll
+            }
         });
     </script>
+
 </body>
 </html>

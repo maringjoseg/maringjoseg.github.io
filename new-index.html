@@ -13,7 +13,15 @@
             background-color: #f5f5f5;
             color: #333;
         }
+
+                /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
         
+
         header {
             background-color: #2c3e50;
             color: white;
@@ -82,6 +90,15 @@
             display: block;
         }
         
+        /* Sección de contenido */
+        .contenido {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
         footer {
             background-color: #2c3e50;
             color: white;
@@ -108,19 +125,19 @@
 <body>
     <header>
         <!-- Icono agregado aquí -->
-        <img src="ruta/a/tu-icono.png" alt="Icono" class="custom-icon">
-        <h1>REPÚBLICA BOLIVARIANA DE VENEZUELA</h1>
+        <img src="images/uba-logo-blanco-azul.png" alt="Icono" class="custom-icon">
+        <!-- <h1>REPÚBLICA BOLIVARIANA DE VENEZUELA</h1>
         <h1>UNIVERSIDAD BICENTENARIA DE ARAGUA</h1>
         <h1>VICERRECTORADO ACADÉMICO</h1>
         <h1>DECANATO DE INVESTIGACIÓN, EXTENSIÓN Y POSTGRADO</h1>
         <h1></h1>
         <h1></h1>
-        <h1></h1>
+        <h1></h1>-->
         <h1>Portafolio Digital para Inteligencia Artificial</h1>
     </header>
     
     <nav>
-        <a href="#" onclick="showPage('presentacion')">Presentación</a>
+        <a href="#" onclick="showPage('home')">Presentación</a>
         <a href="#" onclick="showPage('definiciones')">Definiciones básicas</a>
         <a href="#" onclick="showPage('historia')">Historia</a>
         <a href="#" onclick="showPage('filosofia')">Fundamentación filosófica</a>
@@ -128,19 +145,27 @@
     </nav>
     
     <!-- Página de Inicio -->
-    <div id="presentacion" class="page active">
-        <h2>Bienvenido a nuestra página</h2>
-        <p>Esta es la página principal de nuestro sitio web. Desde aquí puedes navegar a otras secciones.</p>
-        <a href="./assets/presentacion.pdf" target="_blank">Presentación del portafolio digital</a>            
-        <!-- <img src="https://via.placeholder.com/400x200?text=Página+Principal" alt="Imagen principal">-->
+    <div id="home" class="page active">
+        <main class="container">
+            <section class="contenido">
+                <h2>Bienvenido a nuestra página</h2>
+                <p>Esta es la página principal de nuestro sitio web. Desde aquí puedes navegar a otras secciones.</p>
+                <a href="./assets/presentacion.pdf" target="_blank">Presentación del portafolio digital</a>            
+                <!-- <img src="https://via.placeholder.com/400x200?text=Página+Principal" alt="Imagen principal">-->
+            </section>
+        </main>
     </div>
     
     <!-- Página Acerca de -->
     <div id="definiciones" class="page">
-        <h2>Definiciones</h2>
-        <p style="text-align: justify;">Desde que Open AI lanzó ChatGPT como una versión gratuita al público, a finales del año 2022, el uso del término Inteligencia Artificial se ha incrementa de manera importante y ha pasado a formar parte de la vida cotidiana.  El término se ha venido usando desde antes por el público en general, en menor grado, específicamente por algunos usuarios de las redes sociales para referirse alternativamente a los denominados “filtros” que cambian la apariencia de la persona o agregan efectos que parecen reales, por mencionar algunos.</p>
-        <!--<img src="https://via.placeholder.com/400x200?text=Acerca+de" alt="Acerca de nosotros">-->
-        <button class="back-button" onclick="showPage('presentacion')">Volver al Inicio</button>
+        <main class="container">
+            <section class="contenido">
+                <h2>Definiciones</h2>
+                <p style="text-align: justify;">Desde que Open AI lanzó ChatGPT como una versión gratuita </p>
+                <!--<img src="https://via.placeholder.com/400x200?text=Acerca+de" alt="Acerca de nosotros">-->
+                <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
+            </section>
+        </main>
     </div>
     
     <!-- Página de Contacto -->
@@ -152,7 +177,6 @@
             <li>Teléfono: +123456789</li>
             <li>Dirección: Calle Principal 123, Ciudad</li>
         </ul>
-        <img src="https://via.placeholder.com/400x200?text=Contacto" alt="Información de contacto">
         <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
     </div>
     
@@ -165,7 +189,6 @@
             <li>Teléfono: +123456789</li>
             <li>Dirección: Calle Principal 123, Ciudad</li>
         </ul>
-        <img src="https://via.placeholder.com/400x200?text=Contacto" alt="Información de contacto">
         <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
     </div>
 
@@ -178,14 +201,13 @@
             <li>Teléfono: +123456789</li>
             <li>Dirección: Calle Principal 123, Ciudad</li>
         </ul>
-        <img src="https://via.placeholder.com/400x200?text=Contacto" alt="Información de contacto">
         <button class="back-button" onclick="showPage('home')">Volver al Inicio</button>
     </div>
 
     <footer>
         <div class="container">
             <p style="text-align: right;">Autor: José G. Marín G</p>
-            <p style="text-align: right;">San Joaquín de Turmero, mayo, 2025</p>
+            <p style="text-align: center;">San Joaquín de Turmero, mayo, 2025</p>
         </div>
     </footer>
     
